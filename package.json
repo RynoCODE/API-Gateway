@@ -38,6 +38,7 @@
     "undefsafe": "^2.0.5"
   },
   "scripts": {
+    "dev": "nodemon gateway.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
