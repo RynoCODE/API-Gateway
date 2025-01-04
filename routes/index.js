@@ -40,5 +40,18 @@ router.post('/register', (req, res) => {
         )
     }
 })
+const apiAlreadyExists = (registrationInfo)=>{
+    let Exists = false;
+
+    registry.services[registrationInfo.apiName].forEach(instance => {
+        if(instance.url === registrationInfo.url){
+            Exists = true;
+            return;
+        }
+    })
+
+
+    return Exists;
+}
 
 module.exports = router;
